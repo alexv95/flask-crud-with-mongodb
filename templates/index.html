@@ -1,0 +1,90 @@
+{% extends "material/base.html" %}
+{%block content %}
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#"></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">New client</h1>
+      <h4>Create new client</h4>
+      <p>Please type our new client data</p>
+      <form class="col s12" action="/test" method="POST">
+        <div class="row"> 
+          <div class="input-field col s6">
+            <input placeholder="Nombre asignatura" name ="asignature" id="asignature" type="text" class="validate">
+            <label for="first_name">Name</label>
+          </div>          
+          <div class="input-field col s6">
+            <input id="lastname" name="lastname" type="text" class="validate">
+            <label for="lastname">Apellido</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="identifier" name="identifier" type="text" class="validate">
+            <label for="identifier"> Número Identificador</label>
+          </div>  
+          <div class="input-field col s6">
+            <input id="year" name="year" type="text" class="validate">
+            <label for="year">Año</label>
+          </div>
+        </div>
+        <div class="row center">
+          <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Submit
+          </button>
+        </div>
+      
+      </form>
+    </div>
+</div>
+
+ 
+ 
+     
+     
+
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">A sample test crud with mongo</h5>
+          <p class="grey-text text-lighten-4">Just an example</p>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+  
+
+  
+{%endblock%}
+{% block javascript %}
+    <script>
+
+$(document).ready(function() {
+  $('.modal-trigger').leanModal();
+});
+
+  </script>
+{%endblock%}
